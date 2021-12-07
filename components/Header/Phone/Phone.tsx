@@ -1,7 +1,9 @@
+import {Title} from '../../elements'
+
 const Phone = () => {
     return (
         <>
-            <h1>I'm Phone</h1>
+            <Title>I'm Phone</Title>
         </>
 
     )

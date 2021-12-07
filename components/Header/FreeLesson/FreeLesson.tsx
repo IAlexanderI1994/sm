@@ -1,7 +1,9 @@
+import {Title} from '../../elements'
+
 const FreeLesson = () => {
     return (
         <>
-            <h1>I'm FreeLesson</h1>
+            <Title>I'm FreeLesson</Title>
         </>
 
     )

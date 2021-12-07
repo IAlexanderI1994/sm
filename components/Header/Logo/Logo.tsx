@@ -1,7 +1,9 @@
+import {Title} from '../../elements'
+
 const Logo = () => {
     return (
         <>
-            <h1>I'm Logo</h1>
+            <Title>I'm Logo</Title>
         </>
 
     )

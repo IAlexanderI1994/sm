@@ -76,11 +76,7 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 400;
   }
   //Обнуляющие стили конец----------------------------------------------------------------------------------------------
-  html {    
-    min-height:100%;
-  }
-
-  
+    
   h1, h2, h3, h4, h5, h6 {    
     outline:0;    
     vertical-align:baseline;
@@ -93,8 +89,9 @@ const GlobalStyle = createGlobalStyle`
     height: 0;
   }
 
-  body {    
+  body,html {    
     min-height: 100%;
+    font-family: Ubuntu, sans-serif;
     
   }
 
@@ -115,18 +112,6 @@ const GlobalStyle = createGlobalStyle`
   .hidden {
     display: none;
   }
-
-  
-
-  .container {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 16px;    
-  }
-
-  
-
-   
   
 `
 

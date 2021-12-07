@@ -5,6 +5,7 @@ import FreeLesson from "./FreeLesson/FreeLesson";
 
 import { HeaderContainer } from "./elements";
 
+
 const Header = () => {
     return (
         <HeaderContainer>
@@ -15,5 +16,4 @@ const Header = () => {
         </HeaderContainer>
     )
 }
-
 export default Header
