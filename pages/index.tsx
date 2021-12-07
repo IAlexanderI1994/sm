@@ -1,13 +1,15 @@
-
-// import Head from 'next/head'
-// import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import Header from "../components/Header/Header";
+import MainContent from "../components/MainContent/MainContent";
+import Footer from "../components/Footer/Footer";
 
 const Home = () => {
   return (
-    <div className={styles.container}>
-      <h1>Hello NextJS</h1>
-    </div>
+      <>
+          <Header/>
+          <MainContent/>
+          <Footer/>
+      </>
+
   )
 }
 

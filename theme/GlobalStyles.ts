@@ -84,7 +84,7 @@ const GlobalStyle = createGlobalStyle`
   h1, h2, h3, h4, h5, h6 {    
     outline:0;    
     vertical-align:baseline;
-    background:transparent;
+    background:transparent;    
   }
 
   .svg {
@@ -95,7 +95,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {    
     min-height: 100%;
-    //background: ${(props) => props.theme.colors.BODY};
+    
   }
 
   .no-scroll {
@@ -109,7 +109,7 @@ const GlobalStyle = createGlobalStyle`
     top: 0;
     left: 0;
     z-index: 200;
-    //background: ${(props) => props.theme.colors.OVERLAY};
+    
   }
 
   .hidden {
@@ -122,7 +122,12 @@ const GlobalStyle = createGlobalStyle`
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 16px;    
-  }  
+  }
+
+  
+
+   
+  
 `
 
 export default GlobalStyle
