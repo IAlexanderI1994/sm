@@ -7,14 +7,13 @@ interface IProps {
 }
 
 const Wrapper = styled.div`
-  max-width: 1280px;
+  width: 100%;
   margin: 0 auto;
   height: 100%;
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  position: relative;
-  background-color: aquamarine;
+  position: relative; 
 `
 
 const AppContainer = ({ children }: IProps): JSX.Element => {

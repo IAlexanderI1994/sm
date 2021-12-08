@@ -1,10 +1,11 @@
 import {Title} from '../../elements'
+import {WrapperPhone} from "./elements";
 
 const Phone = () => {
     return (
-        <>
-            <Title>I'm Phone</Title>
-        </>
+        <WrapperPhone>
+            <Title fontSize='18px' fontWeight='600'>+7 (495) 877-31-15</Title>
+        </WrapperPhone>
 
     )
 }

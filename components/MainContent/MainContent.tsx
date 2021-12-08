@@ -1,8 +1,12 @@
+import {WrapperMainContent} from './elements'
+import AboutSchool from './AboutSchool/AboutSchool'
+
+
 const MainContent = () => {
     return (
-        <>
-            <h1>I'm MainContent</h1>
-        </>
+        <WrapperMainContent>
+            <AboutSchool/>
+        </WrapperMainContent>
 
     )
 }

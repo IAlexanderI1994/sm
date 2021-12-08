@@ -1,10 +1,10 @@
-import {Title} from '../../elements'
+import {TitleRightButton, WrapperRightButton} from './elements'
 
 const FreeLesson = () => {
     return (
-        <>
-            <Title>I'm FreeLesson</Title>
-        </>
+        <WrapperRightButton>
+            <TitleRightButton fontSize='14px' fontWeight='600' textTr='uppercase'>Бесплатное занятие</TitleRightButton>
+        </WrapperRightButton>
 
     )
 }
