@@ -7,4 +7,5 @@ export const themeColors = {
     BlackBold: 'rgb(34, 34, 34)',
     White: 'rgb(255, 255, 255)',
     Red: 'rgb(255, 0, 51)',
+    RedAdvice: 'rgb(224, 0, 47)',
 }

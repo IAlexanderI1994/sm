@@ -4,8 +4,7 @@ export const WrapperMenu = styled.ul`
     display: flex;
   flex: 40%;
     justify-content: space-around;
-    align-items: center;
-    //margin: 0 20px;
+    align-items: center;    
 `
 export const ItemMenu = styled.li`
    

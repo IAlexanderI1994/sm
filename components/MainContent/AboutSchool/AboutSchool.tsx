@@ -7,7 +7,7 @@ const AboutSchool = () => {
     return (
         <WrapperAboutSchool>
             <ContainerAboutSchool>
-                <ViewBlock top='85px'  viewDirection='column' positionView='relative' >
+                <ViewBlock  viewDirection='column' positionView='relative' >
                     <View viewDirection='column'>
                         <TitleAbout lineH='56px' fontSize='36px' fontWeight='700'>Футбольная школа</TitleAbout>
                         <WrapperImg>

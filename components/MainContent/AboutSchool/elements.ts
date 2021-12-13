@@ -5,21 +5,24 @@ export const WrapperAboutSchool = styled.div`
   display: flex;  
   min-height: 600px;
   height: 75vh;
-  justify-content: center;  
-  width: 100%;
-  background: url('/images/MainFootbol.jpg') 0 0/cover no-repeat;  
+  justify-content: center;
+  align-items: center;
+  width: 100%;  
+  background: url('/images/Trim.svg') 0 110% no-repeat,url('/images/MainFootbol.jpg') 0 0/cover no-repeat;  
 `
+
 
 export const ContainerAboutSchool = styled.div`
   display: flex;
-  width: 1150px;  
+  width: 1200px;  
 `
 export const ViewBlock = styled(View)`
   max-width: 550px;
 `
 export const WrapperImg = styled.div`
   display: flex;
-  justify-content: flex-start;
+  flex-direction: column;
+  //justify-content: flex-start;
   align-items: center;
   padding: 20px 0;
 `
@@ -44,18 +47,19 @@ export const ButtonAbout = styled.div`
   border-radius: 30px;
   cursor: pointer;
   max-width: 320px;
-  margin-top: 20px;
+  margin: 30px 0;
 `
 
 export const VideoBlock = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   max-width: 320px;
 `
 
 export const WrapperPlay = styled.div`
   display: flex;  
+  margin-right: 20px;
 `
 export const EmblemImg = styled.img`
   max-width: 90px;
