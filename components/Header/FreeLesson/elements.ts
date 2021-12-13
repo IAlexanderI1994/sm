@@ -10,6 +10,7 @@ export const WrapperRightButton = styled.div`
   padding: 12px 30px;
   border-radius: 30px;
   cursor: pointer;
+  //max-width: 320px;
 `
 
 export const TitleRightButton = styled(Title)`

@@ -95,19 +95,21 @@ export const MainWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin: 0 auto;  
+  margin: 0 auto;   
 `
 
 export const Title = styled.p<{
     fontSize?: string
     textTr?: string
     fontWeight?: string
+    lineH?: string
 }>`
-  font-family: Ubuntu, sans-serif;
+  font-family: Ubuntu,Arial,sans-serif;
   color: ${(props) => props.theme.colors.BlackMenu};
   ${(props) => props.fontSize && `font-size : ${props.fontSize}`};
   ${(props) => props.fontWeight && `font-weight : ${props.fontWeight}`};
   ${(props) => props.textTr && `text-transform : ${props.textTr}`};
+  ${(props) => props.lineH && `line-height : ${props.lineH}`};
   
    
 `
