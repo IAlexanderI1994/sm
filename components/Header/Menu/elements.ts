@@ -2,12 +2,13 @@ import styled from 'styled-components'
 
 export const WrapperMenu = styled.ul`
     display: flex;
-    justify-content: space-between;
+  flex: 40%;
+    justify-content: space-around;
     align-items: center;
-    margin: 0 20px;
+    //margin: 0 20px;
 `
 export const ItemMenu = styled.li`
-  padding: 0 4px;  
+   
 `
 export const Link = styled.a`
   color: ${(props) => props.theme.colors.BlackMenu};

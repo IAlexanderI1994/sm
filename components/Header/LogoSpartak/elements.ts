@@ -4,9 +4,7 @@ import styled from "styled-components";
 
 export const LogoLink = styled.a`
   text-decoration: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center; 
+  cursor: pointer;    
   margin-right: 30px;
 `
 
