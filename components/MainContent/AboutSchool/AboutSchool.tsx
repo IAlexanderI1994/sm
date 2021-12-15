@@ -1,10 +1,11 @@
-import {WrapperAboutSchool,SchoolNameImg,TitleAbout,ContainerAboutSchool, ButtonAbout, TitleAboutButton, ViewBlock, WrapperImg, VideoBlock, WrapperPlay, EmblemImg, WrapperTitlePlay,TitlePlay} from "./elements";
+import {WrapperAboutSchool,SchoolNameImg,TitleAbout,ContainerAboutSchool, ButtonAbout, TitleAboutButton, ViewBlock, WrapperImg, VideoBlock, WrapperPlay, EmblemImg, WrapperTitlePlay,TitlePlay, TrimBlock, TrimImage} from "./elements";
 import {View} from '../../elements'
 
 
 
 const AboutSchool = () => {
     return (
+    <>
         <WrapperAboutSchool>
             <ContainerAboutSchool>
                 <ViewBlock  viewDirection='column' positionView='relative' >
@@ -30,7 +31,12 @@ const AboutSchool = () => {
                     </VideoBlock>
                 </ViewBlock>
             </ContainerAboutSchool>
+            <TrimBlock>
+                <TrimImage src='/images/Trim.svg'/>
+            </TrimBlock>
         </WrapperAboutSchool>
+
+    </>
     )
 }
 
