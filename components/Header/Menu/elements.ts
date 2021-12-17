@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const WrapperMenu = styled.ul`
     display: flex;
-  flex: 40%;
+    flex: 0 1 40%;
     justify-content: space-around;
     align-items: center;    
 `

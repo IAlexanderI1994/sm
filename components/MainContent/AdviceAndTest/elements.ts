@@ -22,7 +22,7 @@ export const TitleWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  flex: 0 0 45%; 
+  flex: 0 1 45%; 
   height: 70%;
   padding-bottom: 20px;
 `
@@ -44,7 +44,7 @@ export const ButtonContainer = styled.div`
 `
 export const ButtonBlock = styled.div`
   display: flex;
-  flex: 0 0 50%;
+  flex: 0 1 50%;
   align-items: center;
   justify-content: center;
   background-color: ${(props) => props.theme.colors.White};

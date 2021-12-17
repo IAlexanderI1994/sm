@@ -4,7 +4,7 @@ import {Title} from "../../elements";
 
 export const WrapperRightButton = styled.div`
   display: flex;
-  flex: 20%;
+  flex: 0 1 20%;
   align-items: center;
   justify-content: center;
   background-color: ${(props) => props.theme.colors.Red};
