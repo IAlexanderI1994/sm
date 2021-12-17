@@ -4,8 +4,7 @@ import {Title} from "../../elements";
 
 
 export const WrapperAdvice = styled.div`
-  display: flex;
-  flex-direction: column;
+  display: flex;  
   position: relative;
   width: 100%;
   height: 450px;
@@ -16,18 +15,16 @@ export const AdviceContainer = styled.div`
   position: relative;
   width: 1200px;
   margin: 0 auto;
-  
+  align-items: center;  
 `
 
 export const TitleWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  flex: 0 0 40%;
-`
-export const TitleContainer = styled.div`
-  display: flex;
-  flex-direction: column; 
+  justify-content: space-around;
+  flex: 0 0 45%; 
+  height: 70%;
+  padding-bottom: 20px;
 `
 export const TitleBlock = styled.div`
   
@@ -43,6 +40,7 @@ export const SubtitleAdvice = styled(Title)`
 `
 export const ButtonContainer = styled.div`
   display: flex;
+  position: relative;
 `
 export const ButtonBlock = styled.div`
   display: flex;
@@ -50,16 +48,17 @@ export const ButtonBlock = styled.div`
   align-items: center;
   justify-content: center;
   background-color: ${(props) => props.theme.colors.White};
-  padding: 5px 20px;
+  padding: 15px 20px;
   border-radius: 30px;
-  cursor: pointer;
+  cursor: pointer;  
 `
 export const ButtonAdvice = styled(Title)`
   color: ${(props) => props.theme.colors.BlackBold};
 `
 export const ImageBlock = styled.div`
   position: absolute;
-  left: 30%;  
+  top: -28%;
+  left: 53%;  
 `
 export const ArrowImg = styled.img`
   height: 70px;
@@ -79,8 +78,7 @@ export const ImagePlay = styled.img`
 
 export const TrimBlock = styled.div`
   position: absolute;
-  top: 92%;
-  left: -521px;
+  top: 92%;  
   width: 2560px;
   z-index: 2;
 `

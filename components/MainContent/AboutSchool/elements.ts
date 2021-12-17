@@ -73,8 +73,7 @@ export const TitlePlay = styled(Title)`
 
 export const TrimBlock = styled.div`
   position: absolute;
-  top: 730px;
-  left: -521px;
+  top: 730px;  
   width: 2560px;
   z-index: 2;
 `
