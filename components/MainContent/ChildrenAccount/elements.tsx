@@ -4,12 +4,11 @@ import {Title} from "../../elements";
 export const WrapperAccount = styled.div`
   display: flex;
   position: relative;
-  width: 100%;
-  //height: 450px;  
+  width: 100%;    
 `
 export const ContainerAccount = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: column;  
   position: relative;
   z-index: 3;
   width: 1200px;
@@ -19,7 +18,7 @@ export const ContainerAccount = styled.div`
 `
 
 export const TitleBlockAccount = styled.div`
-   
+   margin-bottom: 5%;
 `
 
 export const TitleAccount = styled(Title)`

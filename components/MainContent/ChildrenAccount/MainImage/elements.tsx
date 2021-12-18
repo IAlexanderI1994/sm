@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const WrapperImage = styled.div`
   display: flex;
-  flex: 50%;
+  justify-content: center;
+  flex: 0 1 50%;
   max-height: 623px;
 `
 export const MobileImg = styled.img`
