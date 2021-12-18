@@ -8,7 +8,7 @@ export const WrapperAdvice = styled.div`
   position: relative;
   width: 100%;
   height: 450px;
-  background: ${(props) => props.theme.colors.RedAdvice}; 
+  background: ${(props) => props.theme.colors.BgRed}; 
 `
 export const AdviceContainer = styled.div`
   display: flex;

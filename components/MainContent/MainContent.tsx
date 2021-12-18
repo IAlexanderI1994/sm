@@ -3,6 +3,7 @@ import AboutSchool from './AboutSchool/AboutSchool'
 import Map from './Map/Map'
 import AdviceAndTest from "./AdviceAndTest/AdviceAndTest";
 import ChildrenAccount from './ChildrenAccount/ChildrenAccount';
+import Welcome from "./Welcome/Welcome";
 
 
 const MainContent = () => {
@@ -12,6 +13,7 @@ const MainContent = () => {
             <Map/>
             <AdviceAndTest/>
             <ChildrenAccount/>
+            <Welcome/>
         </WrapperMainContent>
 
     )

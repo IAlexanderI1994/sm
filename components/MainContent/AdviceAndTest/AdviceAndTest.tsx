@@ -3,7 +3,10 @@ import {AdviceContainer, ArrowImg, ButtonAdvice, ButtonBlock, ButtonContainer,
     SubtitleAdvice,SubtitleBlock, TitleAdvice,
     TitleBlock,
     TitleWrapper,
-    WrapperAdvice,TrimBlock, TrimImage } from "./elements"
+    TrimBlock,
+    WrapperAdvice,
+    TrimImage } from "./elements"
+
 
 
 const AdviceAndTest = () => {
