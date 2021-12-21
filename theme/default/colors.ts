@@ -6,4 +6,5 @@ export const themeColors = {
     White: 'rgb(255, 255, 255)',//ffffff
     Red: 'rgb(255, 0, 51)',
     BgRed: 'rgb(224, 0, 47)',//e0002f
+    Gray: 'rgb(136, 136, 136)',//888888
 }

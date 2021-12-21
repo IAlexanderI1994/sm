@@ -14,7 +14,7 @@ export const ContainerAccount = styled.div`
   width: 1200px;
   margin: 0 auto;
   align-items: center;
-  padding: 5% 0;
+  padding: 5% 0; 
 `
 
 export const TitleBlockAccount = styled.div`

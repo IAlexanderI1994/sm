@@ -5,8 +5,8 @@ const Welcome = () => {
         <WrapperWelcome>
             <ContainerWelcome>
                 <BlockTitle>
-                    <TitleWelcome>Приходите на бесплатное занятие</TitleWelcome>
-                    <SubtitleWelcome>Чтобы записаться, заполните форму</SubtitleWelcome>
+                    <TitleWelcome fontSize='30px' fontWeight='600' lineH='47px' >Приходите на бесплатное занятие</TitleWelcome>
+                    <SubtitleWelcome fontSize='20px' fontWeight='400' lineH='31px' >Чтобы записаться, заполните форму</SubtitleWelcome>
                 </BlockTitle>
                 <BlockImage>
                     <WelcomeImage src="/images/Label.svg" />

@@ -4,6 +4,7 @@ import Map from './Map/Map'
 import AdviceAndTest from "./AdviceAndTest/AdviceAndTest";
 import ChildrenAccount from './ChildrenAccount/ChildrenAccount';
 import Welcome from "./Welcome/Welcome";
+import Registration from "./Registration/Registration";
 
 
 const MainContent = () => {
@@ -14,6 +15,7 @@ const MainContent = () => {
             <AdviceAndTest/>
             <ChildrenAccount/>
             <Welcome/>
+            <Registration/>
         </WrapperMainContent>
 
     )
