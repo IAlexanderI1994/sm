@@ -10,7 +10,7 @@ import {
 import {useFormik} from "formik";
 import * as Yup from 'yup'
 import country from '/shared/country.json'
-import {useState} from "react";
+import {useRef, useState} from "react";
 
 const arrayAddresses = [
     {
@@ -42,6 +42,7 @@ const FormRegistration = () => {
     const [open, setOpened] = useState(false)
     const [codeCountry, setCodeCountry] = useState(null)
     const [flagCountry, setFlagCountry] = useState(null)
+    const itemCountryRefs = useRef<Array<HTMLDivElement>>([])
 
     const { handleSubmit, handleChange, values, touched, errors,handleBlur} = useFormik({
         initialValues: {
@@ -81,6 +82,25 @@ const FormRegistration = () => {
         setFlagCountry(parentElement.dataset.flag)
         setOpened(false)
     }
+
+    const createRef = (el: HTMLDivElement) => {
+        if(el && !itemCountryRefs.current.includes(el)) {
+            itemCountryRefs.current.push(el)
+        }
+    }
+
+    const getElementDataIso = (isoC: string) => {
+        let result
+        itemCountryRefs.current.forEach(item => {
+            if(item.dataset.iso === isoC){
+                result = item
+            }
+
+        })
+        return result
+    }
+    const element = getElementDataIso("KZ")
+
 
 return (
     <>
@@ -139,6 +159,7 @@ return (
                                                 data-iso={item.isoCode}
                                                 data-code={item.dialCode}
                                                 data-flag={item.flag}
+                                                ref={createRef}
                                             >
                                                 <BlockNameItem>{item.name}</BlockNameItem>
                                                 <BlockCodeItem>{item.dialCode}</BlockCodeItem>
