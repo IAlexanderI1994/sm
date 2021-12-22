@@ -31,38 +31,55 @@ const arrayAddresses = [
     }
 ]
 
+interface ICountry {
+    name: string
+    dialCode: string
+    isoCode: string
+    flag: string
+}
+
 const FormRegistration = () => {
     const [open, setOpened] = useState(false)
-const { handleSubmit, handleChange, values, touched, errors,handleBlur} = useFormik({
-    initialValues: {
-        nameChildren: '',
-        nameParent: '',
-        phone: ''
-    },
-    onSubmit: (values) => {
-        console.log(values.nameChildren, values.nameParent, values.phone)
-    },
-    validationSchema: Yup.object({
-        nameChildren: Yup.string()
-            .trim('Не может включать начальные и конечные пробелы.')
-            .min(2, 'Минимальное количество символов - 4')
-            .max(10, 'Максимальное количество символов - 10')
-            .required('Обязательное поле'),
-        nameParent: Yup.string()
-            .trim('Не может включать начальные и конечные пробелы.')
-            .min(2, 'Минимальное количество символов - 4')
-            .max(10, 'Максимальное количество символов - 10')
-            .required('Обязательное поле'),
-        phone: Yup.string()
-            .trim('Не может включать начальные и конечные пробелы.')
-            .min(2, 'Минимальное количество символов - 4')
-            .max(10, 'Максимальное количество символов - 10')
-            .required('Обязательное поле'),
+    const [codeCountry, setCodeCountry] = useState(null)
+    const [flagCountry, setFlagCountry] = useState(null)
+
+    const { handleSubmit, handleChange, values, touched, errors,handleBlur} = useFormik({
+        initialValues: {
+            nameChildren: '',
+            nameParent: '',
+            phone: ''
+        },
+        onSubmit: (values) => {
+            console.log(values.nameChildren, values.nameParent, values.phone)
+        },
+        validationSchema: Yup.object({
+            nameChildren: Yup.string()
+                .trim('Не может включать начальные и конечные пробелы.')
+                .min(2, 'Минимальное количество символов - 4')
+                .max(10, 'Максимальное количество символов - 10')
+                .required('Обязательное поле'),
+            nameParent: Yup.string()
+                .trim('Не может включать начальные и конечные пробелы.')
+                .min(2, 'Минимальное количество символов - 4')
+                .max(10, 'Максимальное количество символов - 10')
+                .required('Обязательное поле'),
+            phone: Yup.string()
+                .trim('Не может включать начальные и конечные пробелы.')
+                .min(2, 'Минимальное количество символов - 4')
+                .max(10, 'Максимальное количество символов - 10')
+                .required('Обязательное поле'),
+        })
     })
-})
 
     const codeHandler = () => {
-        setOpened(!open)
+        setOpened(true)
+    }
+
+    const selectHandler = (e: any) => {
+        const parentElement = e.currentTarget
+        setCodeCountry(parentElement.dataset.code)
+        setFlagCountry(parentElement.dataset.flag)
+        setOpened(false)
     }
 
 return (
@@ -106,16 +123,23 @@ return (
                 <WrapperInputCountry>
                     <WrapperListCountry>
                         <ContainerSelect onClick={codeHandler}>
-                            <BlockFlag>flag</BlockFlag>
+                            <BlockFlag><BlockFlagItem src={flagCountry}/></BlockFlag>
                             <BlockArrow><ArrowImg src='/images/arrow.svg'/></BlockArrow>
-                            <BlockCountryCode>code</BlockCountryCode>
+                            <BlockCountryCode>{codeCountry}</BlockCountryCode>
                         </ContainerSelect>
                         <ContainerPhone>
                             {open && (
                                 <ContainerListCountryCode>
                                     {
-                                        country.map(item => (
-                                            <ContainerItemCountry>
+                                        country.map((item: ICountry,index: number) => (
+                                            <ContainerItemCountry
+                                                onClick={selectHandler}
+                                                id={index +`_${item.isoCode}`}
+                                                data-name={item.name}
+                                                data-iso={item.isoCode}
+                                                data-code={item.dialCode}
+                                                data-flag={item.flag}
+                                            >
                                                 <BlockNameItem>{item.name}</BlockNameItem>
                                                 <BlockCodeItem>{item.dialCode}</BlockCodeItem>
                                                 <BlockFlagItem src={item.flag}/>

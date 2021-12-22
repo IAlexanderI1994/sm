@@ -126,6 +126,7 @@ export const ContainerListCountryCode = styled.div`
 export const ContainerItemCountry = styled.div`
    display: flex;
   padding: 8px 10px;
+  cursor: pointer;
 `
 
 export const BlockNameItem = styled.div`
@@ -185,6 +186,7 @@ export const OptionField = styled.option`
   font-size: 15px;
   font-weight: 400;
   line-height: 20px;
+  cursor: pointer;
 `
 
 //Checkbox---------------------------------------------------------
