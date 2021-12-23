@@ -15,7 +15,7 @@ const MainContent = () => {
             <AdviceAndTest/>
             <ChildrenAccount/>
             <Welcome/>
-            <Registration/>
+            {/*<Registration/>*/}
         </WrapperMainContent>
 
     )

@@ -1,28 +1,28 @@
-import styled, {css} from 'styled-components'
+import styled, { css } from 'styled-components'
 
 type TFlexBLock = {
-    viewDirection?: 'column' | 'row' | 'column-reverse' | 'row-reverse'
-    wrap?: 'wrap' | 'nowrap'
-    displayView?: 'block' | 'flex' | 'inline-block' | 'inline-flex' | 'none'
-    align?: 'center' | 'flex-start' | 'flex-end' | 'stretch' | 'baseline'
-    justify?: 'center' | 'flex-start' | 'flex-end' | 'space-between' | 'space-around' | 'stretch'
-    positionView?: 'relative' | 'fixed' | 'absolute' | 'static' | 'sticky'
-    top?: string
-    left?: string
-    right?: string
-    bottom?: string
-    inner?: string
-    outer?: string
-    width?: string
-    height?: string
-    zIndex?: string
-    flex?: string
-    isPointer?: boolean
-    boxSizing?: string
+  viewDirection?: 'column' | 'row' | 'column-reverse' | 'row-reverse'
+  wrap?: 'wrap' | 'nowrap'
+  displayView?: 'block' | 'flex' | 'inline-block' | 'inline-flex' | 'none'
+  align?: 'center' | 'flex-start' | 'flex-end' | 'stretch' | 'baseline'
+  justify?: 'center' | 'flex-start' | 'flex-end' | 'space-between' | 'space-around' | 'stretch'
+  positionView?: 'relative' | 'fixed' | 'absolute' | 'static' | 'sticky'
+  top?: string
+  left?: string
+  right?: string
+  bottom?: string
+  inner?: string
+  outer?: string
+  width?: string
+  height?: string
+  zIndex?: string
+  flex?: string
+  isPointer?: boolean
+  boxSizing?: string
 }
 
 type TFlexLinkBLock = TFlexBLock & {
-    hoverColor?: string
+  hoverColor?: string
 }
 
 export const View = styled.div<TFlexBLock>`
@@ -46,12 +46,12 @@ export const View = styled.div<TFlexBLock>`
 `
 
 export const CustomImg = styled.img<{
-    width?: string
-    height?: string
-    outer?: string
-    cursor?: string
-    transform?: string
-    borderRadius?: string
+  width?: string
+  height?: string
+  outer?: string
+  cursor?: string
+  transform?: string
+  borderRadius?: string
 }>`
   ${(props) => props.width && `width: ${props.width}`};
   ${(props) => props.height && `height: ${props.height}`};
@@ -95,22 +95,18 @@ export const MainWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin: 0 auto;   
+  margin: 0 auto;
 `
 
 export const Title = styled.p<{
-    fontSize?: string
-    textTr?: string
-    fontWeight?: string
-    lineH?: string
+  fontSize?: string
+  textTr?: string
+  fontWeight?: string
+  lineH?: string
 }>`
-  font-family: Ubuntu,Arial,sans-serif;
   color: ${(props) => props.theme.colors.BlackMenu};
   ${(props) => props.fontSize && `font-size : ${props.fontSize}`};
   ${(props) => props.fontWeight && `font-weight : ${props.fontWeight}`};
   ${(props) => props.textTr && `text-transform : ${props.textTr}`};
   ${(props) => props.lineH && `line-height : ${props.lineH}`};
-  
-   
 `
-

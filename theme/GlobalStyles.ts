@@ -1,7 +1,8 @@
 import { createGlobalStyle } from 'styled-components'
-
+import { fonts } from './GlobalFonts'
 
 const GlobalStyle = createGlobalStyle`
+  ${fonts};
   //Обнуляющие стили начало---------------------------------------------------------------------------------------------
   * {
     padding: 0;
@@ -30,12 +31,12 @@ const GlobalStyle = createGlobalStyle`
   html, body {
     height: 100%;
     width: 100%;
-    font-size: 100%;
     line-height: 1;
     font-size: 14px;
     -ms-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
+    font-family: UbuntuLight, sans-serif;
   }
 
   input, button, textarea {
@@ -91,7 +92,7 @@ const GlobalStyle = createGlobalStyle`
 
   body,html {    
     min-height: 100%;
-    font-family: Ubuntu, sans-serif;
+    font-family: UbuntuLight, sans-serif;
     
   }
 
