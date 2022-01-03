@@ -92,7 +92,7 @@ const GlobalStyle = createGlobalStyle`
 
   body,html {    
     min-height: 100%;
-    font-family: UbuntuLight, sans-serif;
+    font-family: Ubuntu-R, sans-serif;
     
   }
 

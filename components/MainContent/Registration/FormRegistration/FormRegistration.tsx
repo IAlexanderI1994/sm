@@ -1,16 +1,17 @@
 import {
     ButtonForm, InputField, TitleFormRegistration, WrapperButton,
-    WrapperFormIn, WrapperInput, WrapperInputCountry, WrapperTitle, BlockArrow, BlockCodeItem,
+    WrapperFormIn, WrapperInput, WrapperInputCountry, WrapperTitle, BlockArrow,BlockYellowArrow, BlockCodeItem,
     BlockCountryCode,
     BlockFlag, BlockFlagItem, BlockNameItem, ContainerInputPhone, ContainerItemCountry,
     ContainerListCountryCode,
     ContainerPhone,
-    ContainerSelect, WrapperListCountry, InputFieldCountry, WrapperSelect, SelectField, OptionField, WrapperCheckbox, CheckboxField, BlockCheckbox, BlockTextCheckbox, TitleCheckbox, LinkPolicy, TitleLinkPolicy, ArrowImg
+    ContainerSelect, WrapperListCountry, InputFieldCountry, WrapperSelect, SelectField, OptionField, WrapperCheckbox, CheckboxField, BlockCheckbox, BlockTextCheckbox, TitleCheckbox, LinkPolicy, TitleLinkPolicy, ArrowImg,
+    ImgYellowArrow
 } from "./elements"
-import {useFormik} from "formik";
-import * as Yup from 'yup'
+
 import country from '/shared/country.json'
-import {useState} from "react";
+import React, {useEffect, useState} from "react";
+import {useForm} from "react-hook-form";
 
 const arrayAddresses = [
     {
@@ -38,50 +39,48 @@ interface ICountry {
     flag: string
 }
 
-const FormRegistration = () => {
-    const [open, setOpened] = useState(false)
-    const [codeCountry, setCodeCountry] = useState(null)
-    const [flagCountry, setFlagCountry] = useState(null)
+type Profile = {
+    nameChildren: string
+    nameParent: string
+    phone: number
+}
 
-    const { handleSubmit, handleChange, values, touched, errors,handleBlur} = useFormik({
-        initialValues: {
-            nameChildren: '',
-            nameParent: '',
-            phone: ''
-        },
-        onSubmit: (values) => {
-            console.log(values.nameChildren, values.nameParent, values.phone)
-        },
-        validationSchema: Yup.object({
-            nameChildren: Yup.string()
-                .trim('Не может включать начальные и конечные пробелы.')
-                .min(2, 'Минимальное количество символов - 4')
-                .max(10, 'Максимальное количество символов - 10')
-                .required('Обязательное поле'),
-            nameParent: Yup.string()
-                .trim('Не может включать начальные и конечные пробелы.')
-                .min(2, 'Минимальное количество символов - 4')
-                .max(10, 'Максимальное количество символов - 10')
-                .required('Обязательное поле'),
-            phone: Yup.string()
-                .trim('Не может включать начальные и конечные пробелы.')
-                .min(2, 'Минимальное количество символов - 4')
-                .max(10, 'Максимальное количество символов - 10')
-                .required('Обязательное поле'),
-        })
-    })
+const FormRegistration = () => {
+    const {register, handleSubmit,formState:{errors}} = useForm({mode: "onBlur"})
+    const [open, setOpened] = useState<boolean>(false)
+    const [codeCountry, setCodeCountry] = useState<string>()
+    const [flagCountry, setFlagCountry] = useState<string>()
+    const [formValid, setFormValid] = useState<boolean>(false)
+    const [checked, setChecked] = useState<boolean>(false)
+
+    useEffect(() => {
+        if(errors.length || !checked){
+            setFormValid(false)
+        }else {
+            setFormValid(true)
+        }
+    }, [errors,checked])
 
     const codeHandler = () => {
         setOpened(true)
     }
 
-    const selectHandler = (e: any) => {
+    const selectHandler = (e: React.MouseEvent <HTMLDivElement>) => {
         const parentElement = e.currentTarget
-        setCodeCountry(parentElement.dataset.code)
-        setFlagCountry(parentElement.dataset.flag)
+        setCodeCountry(parentElement?.dataset?.code)
+        setFlagCountry(parentElement?.dataset?.flag)
         setOpened(false)
     }
 
+    const onSubmit = (data: Profile) => {
+        console.log(data)
+    }
+
+    function handleChangeCheckbox() {
+        setChecked(!checked);
+    }
+
+    console.log(errors)
 return (
     <>
         <WrapperTitle>
@@ -89,36 +88,32 @@ return (
                 Записаться на пробное занятие
             </TitleFormRegistration>
         </WrapperTitle>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit(onSubmit)}>
             <WrapperFormIn>
                 <WrapperInput>
                     <InputField
-                        placeholder='Имя ребёнка'
-                        value={values.nameChildren}
-                        onChange={handleChange}
-                        onBlur={handleBlur}
+                        {...register('nameChildren',{required:true, minLength: 2,maxLength: 7})}
+                        placeholder='Имя Ребёнка'
                         id='nameChildren'
                         name='nameChildren'
                         type='text'
                     />
-                    {touched.nameChildren && errors.nameChildren ? (
-                        <div>{errors.nameChildren}</div>
-                    ): null}
+                    {
+                        errors.nameChildren && <div>Количество символов от 2 до 7</div>
+                    }
                 </WrapperInput>
 
                 <WrapperInput>
                     <InputField
+                        {...register('nameParent',{required:true, minLength: 2,maxLength: 7})}
                         placeholder='Ваше имя'
-                        value={values.nameParent}
-                        onChange={handleChange}
-                        onBlur={handleBlur}
                         id='nameParent'
                         name='nameParent'
                         type='text'
                     />
-                    {touched.nameParent && errors.nameParent ? (
-                        <div>{errors.nameParent}</div>
-                    ): null}
+                    {
+                        errors.nameParent && <div>Количество символов от 2 до 7</div>
+                    }
                 </WrapperInput>
                 <WrapperInputCountry>
                     <WrapperListCountry>
@@ -150,20 +145,19 @@ return (
                             )}
                             <ContainerInputPhone>
                                 <InputFieldCountry
-                                    placeholder='Введите номер'
-                                    value={values.phone}
-                                    onChange={handleChange}
-                                    onBlur={handleBlur}
+                                    {...register('phone',{required:true, minLength: 12,maxLength: 12})}
+                                    placeholder='(999) 999-99-99'
                                     id='phone'
                                     name='phone'
                                     type='tel'
                                 />
+
                             </ContainerInputPhone>
                         </ContainerPhone>
                     </WrapperListCountry>
-                    {touched.phone && errors.phone ? (
-                        <div>{errors.phone}</div>
-                    ): null}
+                    {
+                        errors.phone && <div>Введите 12 символов</div>
+                    }
                 </WrapperInputCountry>
                 <WrapperSelect>
                     <SelectField>
@@ -179,7 +173,7 @@ return (
                 </WrapperSelect>
                 <WrapperCheckbox>
                     <BlockCheckbox>
-                        <CheckboxField type='checkbox' name='Checkbox' value='yes'/>
+                        <CheckboxField onChange={handleChangeCheckbox} type='checkbox' name='Checkbox' value='yes'/>
                     </BlockCheckbox>
                     <BlockTextCheckbox>
                         <TitleCheckbox fontSize='14px' fontWeight='400'>Я принимаю</TitleCheckbox>
@@ -187,10 +181,15 @@ return (
                     </BlockTextCheckbox>
                 </WrapperCheckbox>
                 <WrapperButton>
-                    <ButtonForm textTr='uppercase' fontSize='16px' fontWeight='600' >Записаться бесплатно</ButtonForm>
+                    <ButtonForm
+                        disabled={!formValid}
+                        type='submit'>Записаться бесплатно
+                    </ButtonForm>
+                    <BlockYellowArrow>
+                        <ImgYellowArrow src='/images/YellowArrow.svg'/>
+                    </BlockYellowArrow>
                 </WrapperButton>
             </WrapperFormIn>
-
         </form>
     </>
 )

@@ -42,6 +42,7 @@ export const InputField = styled.input`
 export const WrapperButton = styled.div`
   display: flex;
   justify-content: center;
+  position: relative;
   align-items: center;
   background: ${(props) => props.theme.colors.White};
   width: 100%;
@@ -59,16 +60,39 @@ export const WrapperFormIn = styled.div`
   width: 340px;  
 `
 
-export const ButtonForm = styled(Title)`
+export const ButtonForm = styled.button`
   color: ${(props) => props.theme.colors.BlackBold};
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
+  background: ${(props) => props.theme.colors.White};
+`
+
+export const BlockYellowArrow = styled.div`
+  position: absolute;
+  transform: rotate(315deg);
+  width: 70px;
+  height: 70px;
+  top: -103%;
+  left: 96%;
+`
+
+export const ImgYellowArrow = styled.img`
+   width: 100%;
 `
 
 
 
 //InputCountry-------------------------------------------------------------------
 
+export const ErrorMessage = styled.div`
+  color: ${(props) => props.theme.colors.White};
+  font-style: italic;
+`
+
 export const WrapperListCountry = styled.div`
-   display: flex;
+  display: flex;
   width: 100%;  
   border-radius: 5px;
   background: ${(props) => props.theme.colors.White};
@@ -76,9 +100,10 @@ export const WrapperListCountry = styled.div`
 `
 
 export const ContainerSelect = styled.div`
-   display: flex;
+  display: flex;
   align-items: center;
   flex: 0 1 20%;
+  margin-right: 5px;
 `
 
 export const BlockFlag = styled.div`
@@ -86,11 +111,12 @@ export const BlockFlag = styled.div`
 `
 
 export const BlockArrow = styled.div`
-   width: 10px;
+  width: 10px;
   height: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 6px;
 `
 
 export const ArrowImg = styled.img`
@@ -99,7 +125,8 @@ export const ArrowImg = styled.img`
 `
 
 export const BlockCountryCode = styled.div`
-   
+   margin-left: 10px;
+  font-size: 16px;
 `
 
 export const ContainerPhone = styled.div`
@@ -149,7 +176,7 @@ export const BlockFlagItem = styled.img`
 `
 
 export const ContainerInputPhone = styled.div`
-   display: flex;
+  display: flex;
   width: 100%;
 `
 
@@ -157,9 +184,11 @@ export const InputFieldCountry = styled.input`
   width: 100%;
   height: 50px;  
   font-weight: 400;
-  font-size: 15px;
-  line-height: 20px;
-  padding: 0 20px;
+  font-size: 16px;
+  line-height: 21px;
+  padding-right: 20px;
+  font-family: 'Ubuntu-R';
+  color: ${(props) => props.theme.colors.Gray};
 `
 
 //Select-------------------------------------------------------
@@ -195,6 +224,7 @@ export const WrapperCheckbox = styled.div`
   display: flex;  
   width: 100%;
   margin-bottom: 20px;
+  cursor: pointer;
 `
 
 export const BlockCheckbox = styled.div`
