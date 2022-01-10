@@ -3,14 +3,12 @@ import {BlockCross, BlockPopUp, ContainerPopUp, CrossPopUp,BlockImage, ImagePopU
 const PopUpImage = ({image}: any) => {
     return (
         <WrapperPopUp id="popup">
-
             <ContainerPopUp>
                 <BlockPopUp>
-                    <BlockCross><CrossPopUp href='#'>X</CrossPopUp></BlockCross>
+                    <BlockCross><CrossPopUp href='#header'>X</CrossPopUp></BlockCross>
                     <BlockImage><ImagePopUp src={image}/></BlockImage>
                 </BlockPopUp>
             </ContainerPopUp>
-
         </WrapperPopUp>
     )
 }

@@ -5,8 +5,8 @@ import {useState} from "react";
 
 const arr = Array.from({ length: 16 }, (n, i) =>  i + 1);
 const Gallery = () => {
-    const [image, setImage] = useState('')
-    const changeImg = (e) => {
+    const [image, setImage] = useState<string>()
+    const changeImg = (e: React.MouseEvent<HTMLAnchorElement>) => {
         const parentElement = e.currentTarget
         const dataSet = parentElement?.dataset?.img
         setImage(dataSet)

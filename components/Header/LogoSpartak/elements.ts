@@ -10,5 +10,9 @@ export const LogoLink = styled.a`
 
 export const Logo = styled.img`
   height: 63px;
-  width: 236px;  
+  width: 236px; 
+  &.fixed{
+    height: 48px;
+    width: 180px;
+  }
 `

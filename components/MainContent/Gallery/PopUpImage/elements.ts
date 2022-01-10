@@ -5,7 +5,7 @@ export const WrapperPopUp = styled.div`
   width: 100%;
   height: 100%;
   background-color: rgba(0,0,0,0.8);
-  top: 0;
+  top: 50px;
   left: 0;
   opacity: 0;
   visibility: hidden;
@@ -28,8 +28,7 @@ export const BlockPopUp = styled.div`
   justify-content: center;
   align-items: center;
   background-color: white;  
-  color: black;    
-  padding: 30px;
+  color: black;      
   position: relative;
   height: 800px;
 `
@@ -45,6 +44,7 @@ export const BlockCross = styled.div`
 export const CrossPopUp = styled.a`
   font-size: 20px;
   text-decoration: none;
+  color: ${(props) => props.theme.colors.Red};
 `
 
 export const BlockImage = styled.div`  
@@ -56,8 +56,4 @@ export const ImagePopUp = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;  
-`
-
-export const BlockText = styled.div`
-   
 `
