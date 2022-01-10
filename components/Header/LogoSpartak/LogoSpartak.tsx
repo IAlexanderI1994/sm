@@ -8,7 +8,6 @@ interface IProps {
 }
 
 const LogoSpartak = ({headerFixed}: IProps) => {
-    console.log('headerFixed',typeof headerFixed)
   return (
     <Link href="/" passHref>
       <LogoLink data-element="header-logo">

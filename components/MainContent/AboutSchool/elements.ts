@@ -3,13 +3,14 @@ import {Title, View} from "../../elements";
 
 export const WrapperAboutSchool = styled.div`
   display: flex;  
-  flex-direction: column;
-  min-height: 600px;
-  height: 75vh;
+  flex-direction: column;  
+  height: 700px;
   justify-content: center;
   align-items: center;
   width: 100%;  
-  background: url('/images/MainFootbol.jpg') 0 50%/cover no-repeat; 
+  background: url('/images/MainFootbol.jpg') 0 50%/cover no-repeat;
+  position: relative;
+  overflow: hidden;
 `
 
 export const ContainerAboutSchool = styled.div`
@@ -73,12 +74,11 @@ export const TitlePlay = styled(Title)`
 
 export const TrimBlock = styled.div`
   position: absolute;
-  top: 730px;  
-  width: 2560px;
-  z-index: 2;
+  bottom: -160px;  
+  width: 100%;  
 `
 
-export const TrimImage = styled.img`
-  max-width: 100%;
+export const TrimImage = styled.img`    
+  width: 2560px;
 `
 

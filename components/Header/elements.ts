@@ -1,18 +1,18 @@
 import styled from 'styled-components'
 
 export const HeaderContainer = styled.div`
+  width: 100%;  
   &.fixed{
     position: fixed;
     width: 100%;
     height: 60px;
-    z-index: 2000;
-    //margin: 0 auto;
+    z-index: 2000;    
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: ${(props) => props.theme.colors.White}; ;
     animation-name: show_header;
-    animation-duration: 30ms;    
+    animation-duration: 1s;    
   }
   @keyframes show_header {
     0%{
