@@ -6,20 +6,20 @@ import FreeLesson from './FreeLesson/FreeLesson'
 import { HeaderContainer,HeaderWrapper } from './elements'
 import {useEffect, useState} from "react";
 
-interface Props {
-    headerFixed: boolean;
-}
+
 
 const Header = () => {
     const [fixed, setFixed] = useState<boolean>(false)
-    useEffect(() => {
-        window.onscroll = function showHeader () {
-            if(window.scrollY > 50){
-                setFixed(true)
-            }else {
-                setFixed(false)
-            }
+    const showHeader = () => {
+        if(window.scrollY > 50){
+            setFixed(true)
+        }else {
+            setFixed(false)
         }
+    }
+    useEffect(() => {
+        window.addEventListener('scroll',showHeader)
+        return () => window.removeEventListener("scroll", showHeader);
     }, []);
 
   return (
