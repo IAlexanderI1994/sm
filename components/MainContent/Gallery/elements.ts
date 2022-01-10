@@ -34,5 +34,5 @@ export const ImgMoment = styled.img`
 export const BlockGallery = styled.div`
    display: flex;
   flex-wrap: wrap;
-  padding: 0 5px;
+  padding: 0 5px 10px;
 `
