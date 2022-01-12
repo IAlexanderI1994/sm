@@ -77,11 +77,9 @@ export const ImagePlay = styled.img`
 `
 
 export const TrimBlock = styled.div`
-  position: absolute;
-  //top: 92%; 
+  position: absolute;   
   bottom: -175px;
-  width: 2560px;
-  //z-index: 2;
+  width: 2560px;  
 `
 
 export const TrimImage = styled.img`

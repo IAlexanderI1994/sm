@@ -7,6 +7,7 @@ import Welcome from "./Welcome/Welcome";
 import Registration from "./Registration/Registration";
 import Gallery from './Gallery/Gallery';
 import Methodology from "./Methodology/Methodology";
+import Coaches from "./Coaches/Coaches";
 
 
 const MainContent = () => {
@@ -20,6 +21,7 @@ const MainContent = () => {
             <Registration/>
             <Gallery/>
             <Methodology/>
+            <Coaches/>
         </WrapperMainContent>
     )
 }
