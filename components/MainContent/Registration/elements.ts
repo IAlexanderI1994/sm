@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {TrimBlock, TrimImage} from "../AdviceAndTest/elements";
 
 export const WrapperRegistration = styled.div`
   display: flex;
@@ -35,4 +36,14 @@ export const WrapperForm = styled.div`
   background: ${(props) => props.theme.colors.BgRed};
   border-radius: 10px;
   padding: 50px 0;
+  position: relative;
+  overflow: hidden;
+`
+
+export const FormRegistrationTrimBlock = styled(TrimBlock)`
+   
+`
+
+export const FormRegistrationTrimImage = styled(TrimImage)`
+   
 `
