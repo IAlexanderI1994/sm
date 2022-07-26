@@ -1,0 +1,13 @@
+.root {
+    display: flex;
+    flex: 0 1 40%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.link {
+    color: var(--black-menu);
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: uppercase;
+}

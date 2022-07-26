@@ -1,0 +1,18 @@
+.root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blocks {
+    display: flex;
+    flex-direction: column;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    flex: 0 1 50%;
+    max-height: 623px;
+    height: 100%;
+}

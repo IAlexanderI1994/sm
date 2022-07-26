@@ -1,24 +1,23 @@
-import styled from "styled-components";
-import {Title} from "../../elements";
+import styled from 'styled-components'
+import { Title } from '../../elements'
 
 export const WrapperAccount = styled.div`
   display: flex;
   position: relative;
-  width: 100%;    
+  width: 100%;
 `
 export const ContainerAccount = styled.div`
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;
   position: relative;
   z-index: 3;
   width: 1200px;
   margin: 0 auto;
   align-items: center;
-  padding: 5% 0; 
 `
 
 export const TitleBlockAccount = styled.div`
-   margin-bottom: 5%;
+  margin-bottom: 5%;
 `
 
 export const TitleAccount = styled(Title)`
@@ -26,7 +25,7 @@ export const TitleAccount = styled(Title)`
 `
 
 export const ChaptersBlock = styled.div`
-   display: flex;
+  display: flex;
 `
 
 //style for items___________________________
@@ -42,13 +41,13 @@ export const WrapperChapter = styled.div`
 `
 
 export const ItemBlockLeft = styled.div`
-   display: flex;
+  display: flex;
   justify-content: flex-end;
   margin-bottom: 45px;
 `
 
 export const ItemBlockRight = styled(ItemBlockLeft)`
-   display: flex;
+  display: flex;
   justify-content: flex-start;
 `
 
@@ -66,29 +65,25 @@ export const TextBlockRight = styled(TextBlockLeft)`
   align-items: flex-start;
 `
 
-export const TitleBlock = styled.div`
-  
-`
+export const TitleBlock = styled.div``
 
 export const TitleItemLeft = styled(Title)`
   color: ${(props) => props.theme.colors.BlackBold};
   text-align: end;
 `
 
-export const TitleItemRight = styled(TitleItemLeft)`  
+export const TitleItemRight = styled(TitleItemLeft)`
   text-align: start;
 `
 
-export const SubtitleBlock = styled.div`
-  
-`
+export const SubtitleBlock = styled.div``
 
 export const SubtitleItemLeft = styled(Title)`
   color: ${(props) => props.theme.colors.BlackBold};
   text-align: end;
 `
 
-export const SubtitleItemRight = styled(SubtitleItemLeft)`  
+export const SubtitleItemRight = styled(SubtitleItemLeft)`
   text-align: start;
 `
 
@@ -97,5 +92,5 @@ export const IconBlock = styled.div`
 `
 
 export const IconImage = styled.img`
-   max-width: 100%;
+  max-width: 100%;
 `

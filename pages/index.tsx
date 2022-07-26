@@ -1,16 +1,16 @@
-import Header from "../components/Header/Header";
-import MainContent from "../components/MainContent/MainContent";
-import Footer from "../components/Footer/Footer";
+import Footer from '../components/Footer/Footer'
 
-import {MainWrapper} from '../components/elements'
+import { MainWrapper } from '../components/elements'
+import Header from 'features/app/UI/Header'
+import MainContent from 'features/app/UI/MainContent'
 
 const Home = () => {
   return (
-      <MainWrapper>
-          <Header/>
-          <MainContent/>
-          <Footer/>
-      </MainWrapper>
+    <MainWrapper>
+      <Header />
+      <MainContent />
+      {/* <Footer /> */}
+    </MainWrapper>
   )
 }
 

@@ -1,0 +1,12 @@
+.root {
+    display: flex;
+    flex: 0 1 20%;
+    justify-content: center;
+    align-items: center;
+}
+
+.phone {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--black-menu);
+}
