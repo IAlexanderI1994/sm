@@ -94,7 +94,7 @@ export const MainWrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+
   margin: 0 auto;
 `
 
